@@ -1,0 +1,19 @@
+var prompt=require('prompt-sync')();
+
+const main=()=>{
+ let num1=parseInt(prompt("enter num1:"));
+ let num2=parseInt(prompt("enter num2:"));
+ let operator=prompt("operator:");
+ switch(operator){
+ case "+":
+ console.log(num1+num2);
+ break;
+ case "-":
+ console.log(num1-num2);
+ break;
+ default:
+ console.log("");
+ break;
+ }
+ }
+ main();
