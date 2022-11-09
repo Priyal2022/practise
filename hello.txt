@@ -1,0 +1,66 @@
+Microsoft Windows [Version 10.0.19043.2130]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>docker run -d -p 80:80 docker/getting-started
+dab423dd31e745cc245546850bfcf2963ba259e38b38f6d3a7a37baa25963f82
+
+C:\Windows\system32>ps
+'ps' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\system32>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\system32>docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                NAMES
+dab423dd31e7   docker/getting-started   "/docker-entrypoint.…"   39 seconds ago   Up 37 seconds   0.0.0.0:80->80/tcp   condescending_taussig
+
+C:\Windows\system32>docker stop dab423dd31e7
+dab423dd31e7
+
+C:\Windows\system32>docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+dab423dd31e745cc245546850bfcf2963ba259e38b38f6d3a7a37baa25963f82
+
+Total reclaimed space: 1.093kB
+
+C:\Windows\system32>docker build -t jin-ubuntu-docker-img .
+[+] Building 19.2s (2/2) FINISHED
+ => [internal] load build definition from Dockerfile                                                              19.1s
+ => => transferring dockerfile: 2B                                                                                16.5s
+ => [internal] load .dockerignore                                                                                 18.8s
+ => => transferring context: 2B                                                                                   16.3s
+failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount1551399501/Dockerfile: no such file or directory
+
+C:\Windows\system32>docker pull httpd
+Using default tag: latest
+latest: Pulling from library/httpd
+e9995326b091: Pull complete
+ee55ccd48c8f: Pull complete
+bc66ebea7efe: Pull complete
+5d0f831d3c0b: Pull complete
+e559e5380898: Pull complete
+Digest: sha256:5fa96551b61359de5dfb7fd8c9e97e4153232eb520a8e883e2f47fc80dbfc33e
+Status: Downloaded newer image for httpd:latest
+docker.io/library/httpd:latest
+
+C:\Windows\system32>dockerfile
+'dockerfile' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\system32>Dockerfile
+'Dockerfile' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\system32>docker run -d -p 80:80 docker/getting-started
+d4ccad0f88008973b6bf59876182d89c44c5ff398124e166b12da8071d3d4089
+
+C:\Windows\system32>
